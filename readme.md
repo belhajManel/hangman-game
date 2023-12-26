@@ -40,7 +40,7 @@ Click on the letters to guess the programming language. If the letter is correct
 
 ## Demo
 
-![Hangman Game Demo](./assets/images/hangman-demo.gif)
+https://hangman-game-henna-tau.vercel.app/
 
 ## Contributing
 
@@ -49,7 +49,3 @@ Pull requests are welcome.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-```
-
-```
