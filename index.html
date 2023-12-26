@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap 4 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #000;
+        color: #00ff00;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ff00;
+      }
+
+      #hangmanPic {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      #wordSpotlight {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      #keyboard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-info {
+        background-color: #00ff00;
+        border-color: #00ff00;
+      }
+
+      .float-right {
+        float: right;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      /* Matrix-style button */
+      .btn-matrix {
+        background-color: #000;
+        color: #00ff00;
+        border-color: #00ff00;
+        font-family: "Courier New", Courier, monospace;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .btn-matrix:hover {
+        background-color: #00ff00;
+        color: #000;
+      }
+    </style>
+
+    <title>Matrix Hangman</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Matrix Hangman</h1>
+      <div class="float-right">
+        Wrong Guesses: <span id="mistakes">0</span> of
+        <span id="maxWrong"></span>
+      </div>
+      <div class="text-center">
+        <img id="hangmanPic" src="./images/0.jpg" alt="" />
+        <p>Guess the Programming Language:</p>
+        <p id="wordSpotlight">The word to be guessed goes here</p>
+        <div id="keyboard"></div>
+        <button class="btn btn-info" onClick="reset()">Reset</button>
+      </div>
+    </div>
+
+    <script src="./js/hangman.js"></script>
+  </body>
+</html>
