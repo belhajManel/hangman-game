@@ -102,16 +102,21 @@ function updateHangmanPicture() {
 // Fonction pour vérifier si le joueur a gagné
 function checkIfGameWon() {
   if (wordStatus === answer) {
-    document.getElementById("keyboard").innerHTML = "Vous avez gagné !!!";
+    document.getElementById("reponse").innerHTML =
+      "La réponse était : " + answer;
+    document.getElementById("title-msg").innerHTML = "Vous avez gagné !!!";
+    popUp();
   }
 }
 
 // Fonction pour vérifier si le joueur a perdu
 function checkIfGameLost() {
   if (mistakes === maxWrong) {
-    document.getElementById("wordSpotlight").innerHTML =
+    document.getElementById("reponse").innerHTML =
       "La réponse était : " + answer;
-    document.getElementById("keyboard").innerHTML = "Vous avez perdu !!!";
+    //document.getElementById("keyboard").innerHTML = "Vous avez perdu !!!";
+    document.getElementById("title-msg").innerHTML = "Vous avez perdu !!!";
+    popUp();
   }
 }
 
@@ -147,3 +152,16 @@ document.getElementById("maxWrong").innerHTML = maxWrong;
 randomWord();
 generateButtons();
 guessedWord();
+
+const newgame = document.getElementById("new-game");
+
+// Fonction pour commencer un nouveau jeux
+function newGame() {
+  document.getElementById("pop").classList.add("hidden");
+  reset();
+}
+
+// Fonction pour afficher le popup
+function popUp() {
+  document.getElementById("pop").classList.remove("hidden");
+}
