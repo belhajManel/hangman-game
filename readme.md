@@ -29,7 +29,7 @@ Hangman is a classic word-guessing game implemented with a programming language 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/hangman-game.git
+   git clone https://github.com/belhajManel/hangman-game.git
    ```
 
 2. **Open the index.html file in your browser.**
